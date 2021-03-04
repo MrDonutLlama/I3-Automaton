@@ -9,6 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+#Start Of Boot Sequence (Denoted by a === Going forwards)
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -121,21 +123,24 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8:"
 set $ws9 "9: "
-set $ws10 "10"
+set $ws10 "10: "
 
 # Automatic opening of applications inside of workspaces (Typically named workspaces)
 
-#Workspace 2
-for_window [class="Brave"] move container to workspace number $ws2 
-exec --no-startup-id brave-browser
+#Workspace 2 (Browser Auto Open)
+assign [class="Brave-browser" instance="www.google.com"] $ws2
+exec --no-startup-id i3-msg 'workspace $ws2; exec brave-browser --new-window --app="http://www.google.com"'
 
-#Workspace 3
+#Workspace 3 (Terminals)
 exec --no-startup-id i3-msg 'workspace $ws3; exec i3-sensible-terminal'
 
-#Workspace 9
+#Workspace 9 (Discord)
 for_window [class="discord"] move container to workspace number $ws9
 exec --no-startup-id discord
 
+#Workspace 10 (Minecraft map currently, may change at a later date)
+exec --no-startup-id i3-msg 'workspace $ws10; exec brave-browser --incognito  --app="https://maps.dv.do-minion.com/OverWorld/unmined.index.html" --new-window' 
+assign [class="brave-browser" instance="maps.dv.do-minion.com__OverWorld_unmined.index.html"] $ws10
 
 
 # switch to workspace
@@ -167,7 +172,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -198,7 +203,7 @@ mode "resize" {
 #---Custom Commands---
 
 #Utility Commands
-bindsym $mod+shift+x exec i3lock
+bindsym $mod+shift+x exec i3lock-fancy
 bindsym $mod+r mode "resize"
 
 #---Custom Actions---
@@ -212,3 +217,5 @@ exec_always compton -f -i 0.5 -b
 bar {
         status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
+
+#exec --no-startup-id i3-msg 'workspace $ws1'
