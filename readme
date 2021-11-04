@@ -12,6 +12,7 @@ sudo apt-get install i3blocks
 sudo apt-get install compton
 sudo apt-get install feh
 sudo apt-get install rofi
+sudo apt-get install xscreensaver xscreensaver-gl-extra xscreensaver-data-extra
 
 (These are optional and are just things im using, the ones above are integral to the way the theming works)
 sudo apt-get install cool-retro-term
