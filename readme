@@ -1,0 +1,24 @@
+Welcome to my I3WM Config
+I don't expect this to make it to anyone except me and maybe like 2 other people out there, but in the case it does this file should help you get everything set up until the day i get this all running in ansible or some shit so its an easily installed theme.
+
+(This takes time, it'll be barren for a while but i'll get there)
+
+
+Lists are not all encompassing ATM
+
+List of applications that need to be installed (Convieniently in command format for quick copy pasting)
+sudo apt-get install i3
+sudo apt-get install i3blocks
+sudo apt-get install compton
+sudo apt-get install feh
+sudo apt-get install rofi
+
+(These are optional and are just things im using, the ones above are integral to the way the theming works)
+sudo apt-get install cool-retro-term
+sudo snap install discord (Snap version just seems to work better for auto opening atleast on my system)
+
+
+Individual Application Setups-
+feh:
+Feh needs a folder at /home/*USER*/Pictures/wallpaper, shove all of the pictures you want on your desktop in here, every startup it will pick a random picture and throw it up on your monitor, effortlessley works for multi monitor albeit you will need to use xrandr to determine the names of your monitors currently and apply them as the variables for $firstmonitor $secondmonitor and $thirdmonitor (Add more if you feel like it, i only have three so that's where i stopped)
+

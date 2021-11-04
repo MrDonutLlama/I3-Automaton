@@ -117,6 +117,10 @@ bindsym $mod+a focus parent
 
 #Window
 
+set $firstmonitor DVI-D-0
+set $secondmonitor DP-5
+set $thirdmonitor HDMI-0
+
 
 #Define Outputs (Monitors in our case) for each workspace to bind to
 workspace "1: AOD Left" output DVI-D-0
