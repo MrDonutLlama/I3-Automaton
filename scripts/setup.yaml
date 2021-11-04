@@ -8,6 +8,17 @@
                   - "~/I3_config/compton"
                   - "~/I3_config/i3blocks"
 
+          files:
+                  - [ '../files/config', '~/.config/i3' ]
+                  - [ '../files/comptonconfig.conf', '~/I3_config/compton']
+                  - [ '../files/i3blocks.conf', '~/I3_config/i3blocks' ]
+                  - [ '../files/logo.png', '~/Pictures/wallpaper' ]
+
+          destinations:
+                  - "~/.config/i3"
+                  - "~/I3_config/compton"
+                  - "~/I3_config/i3blocks"
+
 
   tasks:
 
@@ -17,3 +28,11 @@
                     recurse: yes
                     state: directory
             with_items: "{{ folders }}"
+
+          - name: Copy Files
+            ansible.builtin.copy:
+                    src: "{{ item.0 }}"
+                    dest: "{{ item.1 }}"
+            with_items:
+                    - "{{ files }}"
+                    
