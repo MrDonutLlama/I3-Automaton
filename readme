@@ -12,14 +12,33 @@ sudo apt-get install i3blocks
 sudo apt-get install compton
 sudo apt-get install feh
 sudo apt-get install rofi
-sudo apt-get install xscreensaver xscreensaver-gl-extra xscreensaver-data-extra
 
 (These are optional and are just things im using, the ones above are integral to the way the theming works)
 sudo apt-get install cool-retro-term
 sudo snap install discord (Snap version just seems to work better for auto opening atleast on my system)
 
+[Installation Instructions]
+Run bootstrapper.sh - This will check for Python3, Pip3, and Ansible at the latest package manager version (to when this was last updated), if they are not already installed it will install them.
+
+Run
+
+ansible-playbook setup.yaml
+
+next, This ansible playbook sets up the folder structure for the configuration files, as well as for the wallpaper management. It then copies the most current version of all configuration files as well as the logo file into their respective folders.
+
+
+
+
+
+[Older References]
 
 Individual Application Setups-
 feh:
 Feh needs a folder at /home/*USER*/Pictures/wallpaper, shove all of the pictures you want on your desktop in here, every startup it will pick a random picture and throw it up on your monitor, effortlessley works for multi monitor albeit you will need to use xrandr to determine the names of your monitors currently and apply them as the variables for $firstmonitor $secondmonitor and $thirdmonitor (Add more if you feel like it, i only have three so that's where i stopped)
+
+
+
+
+
+
 
