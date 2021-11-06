@@ -1,21 +1,11 @@
-Welcome to my I3WM Config
-I don't expect this to make it to anyone except me and maybe like 2 other people out there, but in the case it does this file should help you get everything set up until the day i get this all running in ansible or some shit so its an easily installed theme.
+I3-Automaton Readme
 
-(This takes time, it'll be barren for a while but i'll get there)
+I3 Automaton is a framework designed to make installing, creating, and sharing "Themes", Workflows, or customizations to I3WM and a few different suites of applications that work around it as well.
+This framework is being designed to be extensible, modular, and flexible to allow "Theme" creators to have a high level of customizability with the way they handle their setups.
+
+Currently Deeply WIP
 
 
-Lists are not all encompassing ATM
-
-List of applications that need to be installed (Convieniently in command format for quick copy pasting)
-sudo apt-get install i3
-sudo apt-get install i3blocks
-sudo apt-get install compton
-sudo apt-get install feh
-sudo apt-get install rofi
-
-(These are optional and are just things im using, the ones above are integral to the way the theming works)
-sudo apt-get install cool-retro-term
-sudo snap install discord (Snap version just seems to work better for auto opening atleast on my system)
 
 [Installation Instructions]
 Run bootstrapper.sh - This will check for Python3, Pip3, and Ansible at the latest package manager version (to when this was last updated), if they are not already installed it will install them.
