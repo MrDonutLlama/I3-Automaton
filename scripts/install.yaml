@@ -1,0 +1,31 @@
+- name: Application Installation
+  hosts: localhost
+
+  vars:
+          aptget:
+                  - "i3"
+                  - "i3blocks"
+                  - "compton"
+                  - "feh"
+                  - "rofi"
+                  - "cool-retro-term"
+                  - "brave-browser"
+                  - "git"
+
+          snap:
+                  - "discord"
+                  - "spotify"
+
+  tasks:
+
+          - name: Install AptGet
+            apt:
+                    name: "{{ item }}"
+            with_items: "{{ aptget }}"
+
+          - name: Install Snap
+            community.general.snap:
+                    name: "{{ item }}"
+            with_items:
+                    - "{{ snap }}"
+

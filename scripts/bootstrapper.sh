@@ -20,5 +20,7 @@ if [ -z "$ANSIBLE_VERSION" ];
 then
 	echo "Install Ansible";
 	pip3 install ansible;	
+	echo "Install Neccesary Ansible Plugins"
+	sudo ansible-galaxy collection install community.general
 fi
 
