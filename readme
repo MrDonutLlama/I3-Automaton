@@ -16,7 +16,9 @@ ansible-playbook setup.yaml
 
 next, This ansible playbook sets up the folder structure for the configuration files, as well as for the wallpaper management. It then copies the most current version of all configuration files as well as the logo file into their respective folders.
 
+Next, Run ansible-playbook install.yaml
 
+This next file will take care of automatically installing I3, as well as the dependent programs this specific theme runs off of
 
 
 
