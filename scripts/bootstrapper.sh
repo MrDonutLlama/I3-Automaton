@@ -19,8 +19,14 @@ ANSIBLE_VERSION=$(ansible --version | grep 2.11)
 if [ -z "$ANSIBLE_VERSION" ];
 then
 	echo "Install Ansible";
-	pip3 install ansible;	
-	echo "Install Neccesary Ansible Plugins"
-	sudo ansible-galaxy collection install community.general
+	sudo apt-get install ansible -y;
+fi
+
+ANSIBLE_PLUGIN_CHECK=$(ansible-galaxy collection list | grep community.general)
+
+if [ -z "$ANSIBLE_PLUGIN_CHECK" ];
+then
+	echo "Install Ansible community.general Plugin Package";
+	sudo ansible-galaxy collection install community.general;
 fi
 

@@ -9,7 +9,6 @@
                   - "feh"
                   - "rofi"
                   - "cool-retro-term"
-                  - "brave-browser"
                   - "git"
 
           snap:
@@ -20,8 +19,7 @@
 
           - name: Install AptGet
             apt:
-                    name: "{{ item }}"
-            with_items: "{{ aptget }}"
+                    name: "{{ aptget }}"
 
           - name: Install Snap
             community.general.snap:
