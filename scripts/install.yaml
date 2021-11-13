@@ -10,6 +10,8 @@
                   - "rofi"
                   - "cool-retro-term"
                   - "git"
+                  - "thunar"
+                  - "ranger"
 
           snap:
                   - "discord"
