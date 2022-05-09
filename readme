@@ -18,15 +18,11 @@ next, This ansible playbook sets up the folder structure for the configuration f
 
 Next, Run ansible-playbook install.yaml
 
+Select if you would like the Lite installation of I3 Automaton during this step, please use "yes" and "no" to make your choice and not y/n!
+The lite installation stops the snap installation of Spotify, Discord, and Brave, and only installs neccesary packages for the theme manager to run properly.
+
 This next file will take care of automatically installing I3, as well as the dependent programs this specific theme runs off of
 
-
-
-[Older References]
-
-Individual Application Setups-
-feh:
-Feh needs a folder at /home/*USER*/Pictures/wallpaper, shove all of the pictures you want on your desktop in here, every startup it will pick a random picture and throw it up on your monitor, effortlessley works for multi monitor albeit you will need to use xrandr to determine the names of your monitors currently and apply them as the variables for $firstmonitor $secondmonitor and $thirdmonitor (Add more if you feel like it, i only have three so that's where i stopped)
 
 
 
