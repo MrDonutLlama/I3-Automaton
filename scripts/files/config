@@ -5,11 +5,7 @@
 
 # Startup Programs
 # feh Works for loading backgrounds onto your monitors, load pictures into /home/*USER*/Pictures/wallpaper and enjoy, works effortlessley for multiple monitors
-exec_always feh --bg-scale --randomize /home/chance/Pictures/wallpaper/*
-# compton uhhh, well tbh im still not sure exactly what it's doing here but i'm not going to remove it until i know for sure it isn't going to break everything
-exec_always compton -f -i 0.5 -b --config ~/I3_config/compton/comptonconfig.conf
-#Testing xScreensaver stuff, may or may not work
-#exec_always xscreensaver
+exec_always feh --bg-scale --randomize ~/Pictures/wallpaper/*
 
 
 # ==TODO==

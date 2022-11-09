@@ -14,26 +14,10 @@
                   - "ranger"
                   - "vim"
 
-          snap:
-                  - "discord"
-                  - "spotify"
-                  - "brave"
-
-  vars_prompt:
-          - name: "Install_Snap_Suite"
-            prompt: "Would you like to install the Snap Suite? (Discord, Brave, & Spotify) [Yes/No]"
-            private: no
-
   tasks:
 
           - name: Install AptGet
             apt:
-                    name: "{{ aptget}}"
+                    name: "{{aptget}}"
 
-          - name: Install Snap
-            community.general.snap:
-                    name: "{{ item }}"
-            with_items:
-                    - "{{ snap }}"
-            when: Install_Snap_Suite | bool
 
