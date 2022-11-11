@@ -10,6 +10,18 @@ Currently Deeply WIP
 [Installation Instructions]
 Run bootstrapper.sh - This will check for Python3, Pip3, and Ansible at the latest package manager version (to when this was last updated), if they are not already installed it will install them.
 
+If bootstrapper.sh does not automatically run configBuilder.sh please run it manually after the bootstrapper has finished up!
+
+configBuilder.SH - This script will prompt the user for various settings they would like to automatically include inthe configuration files of i3 or the related suite of applications attached to this theme builder.
+IE:
+Will ask user what program launcher they would like to use (Rofi vs. Dmenu)
+Will ask user (In hex codes, albeit a few simple colors such as red blue green yellow etc will be accepted input) what colors they would like various parts of the UI to exist as
+Will ask users what "Widgets" they would like their i3 blocks configuration to automatically show and which ones they would like to shut off
+etc...
+(Feature list on this script will be expanded as further progress is made on i3-Automaton)
+
+
+
 Run
 
 ansible-playbook setup.yaml

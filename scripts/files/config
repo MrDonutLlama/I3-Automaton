@@ -4,13 +4,15 @@
 
 
 # Startup Programs
-# feh Works for loading backgrounds onto your monitors, load pictures into /home/*USER*/Pictures/wallpaper and enjoy, works effortlessley for multiple monitors
+# feh Works for loading backgrounds onto your monitors, load pictures into /home/Pictures/wallpaper and enjoy, works effortlessley for multiple monitors
 exec_always feh --bg-scale --randomize ~/Pictures/wallpaper/*
 
 
 # ==TODO==
-# Add ability for different files to be picked &/or a more universal folder for placing boot animations (this is not a neccesary feature and i may create a way inside of the theme installation to be able to toggle this on or off)
-#exec --no-startup-id i3-msg 'workspace $ws5; exec mpv --fs ~/Videos/Startup\ Animations/PS2BootAnimTrim.mp4; focus up; sleep 5' 
+# Add ability for user to customize colors upon first boot of i3, possibly through use of a bash script to allow changes to file before installation
+# Add ability to customize Ansible install parameters between various choices for different things (IE: Rofi vs. Dmenu), Use bash script to allow autogeneration of files after boothstrapper has ran
+# Add ability for workspace envirnment names to be changed at installation runtime, most likely, once again, through the bootstrapper script. Either that or build a breakout Config builder script to allow for more extensible operations and forwarding of use cases to forks of the repo and other end-users besides myself
+
 
 
 # Sets mod to Super (win/cmd) key instead of ALT - ALT conflicts with a lot of programs keybinds, feel free to change this if you want, your pinky might honestly thank you
